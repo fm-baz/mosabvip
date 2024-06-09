@@ -1,3 +1,4 @@
+// @ts-ignore
 import { connect } from 'cloudflare:sockets';
 
 // How to generate your own UUID:
@@ -30,7 +31,7 @@ export default {
 		// uuid_validator(request);
 		try {
 			userID = env.UUID || userID;
-			พร็อกซีไอพี = env.พร็อกซีไอพี || พร็อกซีไอพี;
+			พร็อกซีไอพี = env.PROXYIP || พร็อกซีไอพี;
 			dohURL = env.DNS_RESOLVER_URL || dohURL;
 			let userID_Path = userID;
 			if (userID.includes(',')) {
